@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="13E28" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="ContackInfo" representedClassName="ContackInfo" syncable="YES">
+        <attribute name="age" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="birthday" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="details" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="ContackInfoOther" inverseName="info" inverseEntity="ContackInfoOther" syncable="YES"/>
+    </entity>
+    <entity name="ContackInfoOther" representedClassName="ContackInfoOther" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="telephone" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="info" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="ContackInfo" inverseName="details" inverseEntity="ContackInfo" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ContackInfo" positionX="-306" positionY="5" width="128" height="103"/>
+        <element name="ContackInfoOther" positionX="-54" positionY="0" width="128" height="103"/>
+    </elements>
+</model>
